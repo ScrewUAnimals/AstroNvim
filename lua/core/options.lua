@@ -12,7 +12,7 @@ astronvim.vim_opts(astronvim.user_plugin_opts("options", {
     ignorecase = true, -- Case insensitive searching
     laststatus = 3, -- globalstatus
     lazyredraw = true, -- lazily redraw screen
-    mouse = "a", -- Enable mouse support
+    -- mouse = "a", -- Enable mouse support
     number = true, -- Show numberline
     preserveindent = true, -- Preserve indent structure as much as possible
     pumheight = 10, -- Height of the pop up menu
@@ -22,7 +22,7 @@ astronvim.vim_opts(astronvim.user_plugin_opts("options", {
     showmode = false, -- Disable showing modes in command line
     sidescrolloff = 8, -- Number of columns to keep at the sides of the cursor
     signcolumn = "yes", -- Always show the sign column
-    smartcase = true, -- Case sensitivie searching
+    smartcase = false, -- Case sensitivie searching
     splitbelow = true, -- Splitting a new window below the current one
     splitright = true, -- Splitting a new window at the right of the current one
     swapfile = false, -- Disable use of swapfile for the buffer
@@ -57,5 +57,6 @@ astronvim.vim_opts(astronvim.user_plugin_opts("options", {
     loaded_zipPlugin = true, -- disable zip
     loaded_vimball = true, -- disable vimball
     loaded_vimballPlugin = true, -- disable vimball
+    transparent_enabled = true, -- transparency enable
   },
 }))

@@ -64,11 +64,49 @@ local astro_plugins = {
   },
 
   -- Statusline
-  ["feline-nvim/feline.nvim"] = {
+  -- ["feline-nvim/feline.nvim"] = {
+  --   after = "nvim-web-devicons",
+  --   config = function()
+  --     require "configs.feline"
+  --   end,
+  -- },
+
+  ["windwp/windline.nvim"] = {
     after = "nvim-web-devicons",
     config = function() require "configs.feline" end,
   },
 
+  -- bar
+  ["romgrk/barbar.nvim"] = {
+    cmd = "BarbarEnable",
+    config = function()
+      require('bufferline')
+    end,
+  },
+
+  ["xiyaowong/nvim-transparent"] = {
+    after = "nvim-web-devicons",
+    cmd = {
+      "TransparentEnable",
+      "TransparentDisable",
+      "TransparentToggle",
+    },
+    config = function()
+      require('transparent')
+    end,
+  },
+
+  ["xiyaowong/nvim-transparent"] = {
+    after = "nvim-web-devicons",
+    cmd = {
+      "TransparentEnable",
+      "TransparentDisable",
+      "TransparentToggle",
+    },
+    config = function()
+      require('transparent')
+    end,
+  },
   -- Parenthesis highlighting
   ["p00f/nvim-ts-rainbow"] = { after = "nvim-treesitter" },
 
@@ -165,6 +203,19 @@ local astro_plugins = {
     cmd = "Telescope",
     module = "telescope",
     config = function() require "configs.telescope" end,
+  },
+
+  ["sidebar-nvim/sidebar.nvim"] = {
+    cmd = "sidebar",
+    module = "sidebar",
+    cmd = {
+      "SidebarNvimToggle",
+      "SidebarNvimClose",
+      "SidebarNvimOpen",
+      "SidebarNvimUpdate",
+      "SidebarNvimResize size",
+      "SidebarNvimFocus",
+    },
   },
 
   -- Fuzzy finder syntax support

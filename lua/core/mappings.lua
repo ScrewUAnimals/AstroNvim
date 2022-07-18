@@ -26,6 +26,12 @@ maps.n["<leader>pu"] = { "<cmd>PackerUpdate<cr>", desc = "Packer Update" }
 -- Alpha
 if is_available "alpha-nvim" then maps.n["<leader>d"] = { "<cmd>Alpha<cr>", desc = "Alpha Dashboard" } end
 
+-- SymbolsOutline
+if is_available "aerial.nvim" then
+  -- maps.n["<leader>a"] = { "<cmd>AerialToggle left<cr>", desc = "Symbols outline" }
+  maps.n["<leader>a"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" }
+end
+
 -- Bufdelete
 if is_available "bufdelete.nvim" then
   maps.n["<leader>c"] = { "<cmd>Bdelete<cr>", desc = "Close window" }

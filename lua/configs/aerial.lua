@@ -5,7 +5,17 @@ aerial.setup(astronvim.user_plugin_opts("plugins.aerial", {
   backends = { "lsp", "treesitter", "markdown" },
   min_width = 28,
   show_guides = true,
-  filter_kind = false,
+  default_direction = "prefer_left",
+  filter_kind = {
+      "Class",
+      "Constructor",
+      "Enum",
+      "Function",
+      "Interface",
+      "Module",
+      "Method",
+      "Struct",
+    },
   icons = {
     Array = "",
     Boolean = "⊨",
