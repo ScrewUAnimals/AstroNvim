@@ -84,6 +84,17 @@ local astro_plugins = {
     end,
   },
 
+  ["kessejones/git-blame-line.nvim"] = {
+    cmd = {
+      "GitBlameLineShow",
+      "GitBlameLineClear",
+    },
+    config = function()
+      require('git-blame-line').setup({
+      })
+    end,
+  },
+
   ["xiyaowong/nvim-transparent"] = {
     after = "nvim-web-devicons",
     cmd = {
