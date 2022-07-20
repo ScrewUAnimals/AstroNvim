@@ -30,6 +30,7 @@ if is_available "alpha-nvim" then maps.n["<leader>d"] = { "<cmd>Alpha<cr>", desc
 if is_available "aerial.nvim" then
   -- maps.n["<leader>a"] = { "<cmd>AerialToggle left<cr>", desc = "Symbols outline" }
   maps.n["<leader>a"] = { "<cmd>AerialToggle<cr>", desc = "Symbols outline" }
+  maps.n["<leader>A"] = { "<cmd>AerialToggle right<cr>", desc = "Symbols outline" }
 end
 
 -- Bufdelete
@@ -145,6 +146,8 @@ if is_available "telescope.nvim" then
   maps.n["<leader>fm"] = { function() require("telescope.builtin").marks() end, desc = "Search marks" }
   maps.n["<leader>fo"] = { function() require("telescope.builtin").oldfiles() end, desc = "Search history" }
   maps.n["<leader>fc"] =
+    { function() require("telescope.builtin").grep_string() end, desc = "Search for word under cursor" }
+  maps.n["<leader>fj"] =
     { function() require("telescope.builtin").grep_string() end, desc = "Search for word under cursor" }
   maps.n["<leader>sb"] = { function() require("telescope.builtin").git_branches() end, desc = "Git branches" }
   maps.n["<leader>sh"] = { function() require("telescope.builtin").help_tags() end, desc = "Search help" }
