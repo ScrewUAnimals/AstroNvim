@@ -22,7 +22,10 @@ local astro_plugins = {
     event = "VimEnter",
     config = function() require "configs.notify" end,
   },
-
+  -- reopen files at your last edit position
+  ["vladdoster/remember.nvim"] = {
+    config = function() require "remember" end,
+  },
   -- Neovim UI Enhancer
   ["MunifTanjim/nui.nvim"] = { module = "nui" },
 
