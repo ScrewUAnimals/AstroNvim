@@ -11,11 +11,10 @@ telescope.setup(astronvim.user_plugin_opts("plugins.telescope", {
     prompt_prefix = " ",
     selection_caret = "❯ ",
     path_display = { "truncate" },
-    selection_strategy = "reset",
+    selection_strategy = "follow",
     sorting_strategy = "ascending",
     layout_strategy = "horizontal",
-    layout_config = {
-      horizontal = {
+    layout_config = { horizontal = {
         prompt_position = "top",
         preview_width = 0.55,
         results_width = 0.8,
@@ -23,9 +22,9 @@ telescope.setup(astronvim.user_plugin_opts("plugins.telescope", {
       vertical = {
         mirror = false,
       },
-      width = 0.87,
+      width = 0.99,
       height = 0.80,
-      preview_cutoff = 120,
+      preview_cutoff = 0,
     },
 
     mappings = {
@@ -90,6 +89,21 @@ telescope.setup(astronvim.user_plugin_opts("plugins.telescope", {
       },
     },
   },
-  pickers = {},
+
+  pickers = {
+    find_files = {
+      mappings = {
+        n = {
+          ["cd"] = function(prompt_bufnr)
+            local selection = require("telescope.actions.state").get_selected_entry()
+            local dir = vim.fn.fnamemodify(selection.path, ":p:h")
+            require("telescope.actions").close(prompt_bufnr)
+            -- Depending on what you want put `cd`, `lcd`, `tcd`
+            vim.cmd(string.format("silent lcd %s", dir))
+          end
+        }
+      }
+    },
+  },
   extensions = {},
 }))
