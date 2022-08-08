@@ -1,5 +1,6 @@
-local impatient_ok, impatient = pcall(require, "impatient")
-if impatient_ok then impatient.enable_profile() end
+local require_ok, pcall_ok = pcall(require, "impatient")
+-- enable_profile comes from https://github.com/lewis6991/impatient.nvim
+if require_ok then pcall_ok.enable_profile() end
 
 for _, source in ipairs {
   "core.utils",
