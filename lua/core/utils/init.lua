@@ -5,6 +5,7 @@ local map = vim.keymap.set
 
 astronvim.install = astronvim_installation or { home = stdpath "config" }
 astronvim.install.config = stdpath("config"):gsub("nvim$", "astronvim")
+-- rtp == runtimepath
 vim.opt.rtp:append(astronvim.install.config)
 local supported_configs = { astronvim.install.home, astronvim.install.config }
 
