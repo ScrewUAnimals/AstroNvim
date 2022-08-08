@@ -66,13 +66,22 @@ local astro_plugins = {
     config = function() require "configs.neo-tree" end,
   },
 
-  -- Statusline
-  -- ["feline-nvim/feline.nvim"] = {
-  --   after = "nvim-web-devicons",
-  --   config = function()
-  --     require "configs.feline"
-  --   end,
-  -- },
+  ["rainbowhxch/beacon.nvim"] = {
+    config = function()
+      require('beacon').setup({
+        enable = true,
+	      size = 80,
+	      fade = true,
+	      minimal_jump = 10,
+	      show_jumps = true,
+	      focus_gained = false,
+	      shrink = true,
+	      timeout = 500,
+	      ignore_buffers = {},
+	      ignore_filetypes = {},
+      })
+    end,
+  },
 
   ["windwp/windline.nvim"] = {
     after = "nvim-web-devicons",
