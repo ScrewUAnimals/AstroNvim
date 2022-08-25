@@ -16,6 +16,9 @@ maps.n["<C-s>"] = { "<cmd>w!<cr>", desc = "Force write" }
 maps.n["<C-q>"] = { "<cmd>q!<cr>", desc = "Force quit" }
 maps.n["Q"] = "<Nop>"
 
+maps.n["<leader>1"] = { "^", desc = "begin of line" }
+maps.n["<leader>2"] = { "$", desc = "end of line" }
+
 -- Packer
 maps.n["<leader>pc"] = { "<cmd>PackerCompile<cr>", desc = "Packer Compile" }
 maps.n["<leader>pi"] = { "<cmd>PackerInstall<cr>", desc = "Packer Install" }
